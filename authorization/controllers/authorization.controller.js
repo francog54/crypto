@@ -21,7 +21,7 @@ exports.login = (req, res) => {
 exports.refresh_token = (req, res) => {
     try {
         req.body = req.jwt;
-        let token = jwt.sign(req.body, jwtSecret);
+        let token = jwt.sign(req.body, Secret);
         res.status(201).send({id: token});
     } catch (err) {
         res.status(500).send({errors: err});

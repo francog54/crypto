@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "5cd5552d-7182-44ff-8aa1-5bfface593b2",
+		"name": "Api-crypto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crear usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nombre\" : \"Franco\",\r\n   \"apellido\" : \"García\",\r\n   \"username\" : \"fjgfrancojg\",\r\n   \"password\" : \"clave1234\",\r\n   \"monedaPreferida\": \"Peso\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3600/usuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear criptomoneda",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ5MTk0M2VhYjdiMzA5ODhiYmI1YjMiLCJmaW5kQnlVc2VybmFtZSI6ImZqZ2ZyYW5jb2pnIiwibmFtZSI6IkZyYW5jbyBHYXJjw61hIiwicmVmcmVzaEtleSI6IlVjaWJ1anRrWVhOMERMMGlwdGJhMmc9PSIsImlhdCI6MTYzMjE4MDU1NX0.S9-ZFYqie2JuVyyKZD_2BT5dii14Rc5E8k-aV2vdoqM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n   \"simbolo\" : \"฿\",\r\n   \"precioPeso\" : \"4737747,12\",\r\n   \"precioDolar\" : \"48203,80\",\r\n   \"precioEuro\" : \"41119,32\",\r\n   \"nombre\" : \"Bitcoin\",\r\n   \"imagen\" : \"data:image/jpeg;base64,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\",\r\n   \"fecha\": \"2019-04-28T14:45:15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3600/criptomonedas",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"criptomonedas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista criptomonedas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3600/criptomonedas",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"criptomonedas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista criptomonedas x usuario",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ5MTk0M2VhYjdiMzA5ODhiYmI1YjMiLCJmaW5kQnlVc2VybmFtZSI6ImZqZ2ZyYW5jb2pnIiwibmFtZSI6IkZyYW5jbyBHYXJjw61hIiwicmVmcmVzaEtleSI6IlVjaWJ1anRrWVhOMERMMGlwdGJhMmc9PSIsImlhdCI6MTYzMjE4MDU1NX0.S9-ZFYqie2JuVyyKZD_2BT5dii14Rc5E8k-aV2vdoqM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3600/getCriptomonedas/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"getCriptomonedas",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar criptomonedas al usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ5MTk0M2VhYjdiMzA5ODhiYmI1YjMiLCJmaW5kQnlVc2VybmFtZSI6ImZqZ2ZyYW5jb2pnIiwibmFtZSI6IkZyYW5jbyBHYXJjw61hIiwicmVmcmVzaEtleSI6InJHTTF4UWJWa3g4Y0pEMlAwbk9OMkE9PSIsImlhdCI6MTYzMjE4MTE4NH0.wmxNL_aZwIJPgLAI7W_K5uHSseLiKwCUCcZ6vustrY4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n  \"criptomonedas\": [ \r\n    { \r\n        \"_id\"  : \"6149195feab7b30988bbb5b6\",\r\n        \"precio\": 339362.05,\r\n        \"nombre\" : \"Ethereum\"\r\n   },\r\n    { \r\n        \"_id\"  : \"614919c4eab7b30988bbb5bb\",\r\n        \"precio\" : 4737747.12,\r\n        \"nombre\" : \"Bitcoin\"\r\n    }\r\n   ]\r\n       \r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3600/usuarios/",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"usuarios",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"fjgfrancojg\",\r\n    \"password\": \"clave1234\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3600/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

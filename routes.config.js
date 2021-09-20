@@ -9,7 +9,7 @@ exports.routesConfig = function (app) {
         UsuariosController.insert
     ]);
 
-    app.patch('/usuarios/:usuarioId', [
+    app.patch('/usuarios', [
         ValidationMiddleware.validJWTNeeded,
         UsuariosController.patchById
     ]);
