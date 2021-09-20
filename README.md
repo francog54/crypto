@@ -3,6 +3,7 @@ Pasos para correr el proyecto:
 1- Instalar nodejs: https://nodejs.org/en/
 2- Instalar Módulos con el comando: npm install
 3- Comando para iniciar el proyecto: npm start
+4- Importar colección de postman que se encuentra en la carpeta raíz del proyecto : Api-crypto.postman_collection.json
 
 Rutas:
 
