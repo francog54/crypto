@@ -94,8 +94,6 @@ exports.list = (perPage, page) => {
 };
 
 exports.patchUsuario = (id, usuarioData) => {
-    console.log(id)
-    console.log(usuarioData)
     return Usuario.findOneAndUpdate({
         _id: id
     }, usuarioData);

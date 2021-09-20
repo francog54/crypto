@@ -45,7 +45,7 @@ exports.patchById = (req, res) => {
 
     UsuarioModel.patchUsuario(req.jwt.userId, req.body)
         .then((result) => {
-            res.status(204).send({});
+            res.status(201).send('Se agregaron las siguientes criptomonedas con éxito: ' + JSON.stringify(result.criptomonedas));
         }).catch((err) => {
             res.status(500).send({errors: err});
         });
